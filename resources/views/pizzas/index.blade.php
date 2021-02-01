@@ -1,20 +1,15 @@
-@extends('Layouts.layout')
+@extends('Layouts.app')
 
 @section('content')
-        <div class="flex-center position-ref full-height">
-        <div class="content">
-        <div class="title m-b-md">
-        
-        List of Pizza Orders
-        </div>
-       <!--  @for($i = 0; $i< count($pizzas); $i++)
-        <p> {{$pizzas[$i]['type']}}</p>
-        @endfor -->
-        @foreach($pizzas as $pizza)
-        <div>
-           {{ $pizza -> type}}  - {{$pizza -> base}} - {{$pizza -> name}}
-        </div>
+       <div class="wrapper pizza-index">
+          <h1>Pizza Orders</h1>
+          @foreach($pizzas as $pizza)
+       <div class="pizza-item">
+          <img src="/img/pizza.png" alt="pizza icon">      
+          <h4><a href="/pizzas/{{$pizza->id}}">{{ $pizza -> type}} - {{$pizza -> name}}</a></h4>
+       </div>
         @endforeach
-        </div>
-        </div>
+       </div>
+        
+        
    @endsection
