@@ -5,7 +5,7 @@
         <div class="content">
         <div class="title m-b-md">
         
-        List of our yummy Pizza!!
+        List of Pizza Orders
         </div>
        <!--  @for($i = 0; $i< count($pizzas); $i++)
         <p> {{$pizzas[$i]['type']}}</p>
